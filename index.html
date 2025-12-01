@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Final Daysi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- ================= MODAL BIENVENIDA ================= -->
+<div id="welcomeModal" style="
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+">
+    <form id="welcomeForm" style="
+        background: linear-gradient(160deg, #3f1670, #240046);
+        padding: 30px;
+        border-radius: 18px;
+        text-align: center;
+        max-width: 350px;
+        width: 90%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    ">
+        <h2 style="margin-bottom: 15px;">👋 Bienvenida</h2>
+
+        <input type="text" id="userName" placeholder="Nombre" required class="calc-input">
+        <input type="text" id="userLastName" placeholder="Apellido" required class="calc-input">
+        <input type="number" id="userAge" placeholder="Edad" required class="calc-input">
+
+        <button type="submit" class="btn btn-success" style="margin-top: 10px;">
+            Entrar al sitio
+        </button>
+    </form>
+</div>
+<!-- =================================================== -->
+
+<header class="header">
+    <div class="container header-flex">
+
+        <div class="logo">
+            <h1>Proyecto Final Daysi</h1>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-menu">
+
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="paginas/html_basico.html">HTML Básico</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Banco</a>
+                    <ul class="submenu">
+                        <li><a href="paginas/banco_tabla.html">Tabla Banco</a></li>
+                        <li><a href="paginas/banco_miembros.html">Miembros Banco</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Operaciones</a>
+                    <ul class="submenu">
+                        <li><a href="paginas/operaciones.html">Calculadora</a></li>
+                        <li><a href="paginas/clima.html">Clima</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Formularios</a>
+                    <ul class="submenu">
+                        <li><a href="paginas/matriculacion.html">Matriculación</a></li>
+                        <li><a href="paginas/prueba.html">Prueba</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">APIs</a>
+                    <ul class="submenu">
+                        <li><a href="paginas/paises.html">Países</a></li>
+                        <li><a href="paginas/pokemon.html">Pokémon</a></li>
+                        <li><a href="paginas/rick_morty.html">Rick & Morty</a></li>
+                        <li><a href="paginas/criptomonedas.html">Criptomonedas</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Multimedia</a>
+                    <ul class="submenu">
+                        <li><a href="paginas/multimedia.html">Mapas</a></li>
+                        <li><a href="paginas/multimedia2.html">YouTube</a></li>
+                        <li><a href="paginas/multimedia3.html">Video / Audio</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="paginas/redsocial.html">Red Social</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="paginas/comentarios.html">Comentarios</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="paginas/noticias.html">Noticias</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Menús</a>
+                    <ul class="submenu">
+                        <li><a href="paginas/menu1.html">Menú 1</a></li>
+                        <li><a href="paginas/menu2.html">Menú 2</a></li>
+                        <li><a href="paginas/menu3.html">Menú 3</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="container">
+
+        <!-- ✅ SALUDO MOSTRADO -->
+        <div class="desc-card" style="text-align:center; margin-bottom: 30px;">
+            <h3 id="greetingText">Bienvenido/a al sitio</h3>
+        </div>
+
+        <div class="site-description">
+            <h3 class="titulo-seccion">Descripción General del Sitio</h3>
+
+            <div class="description-grid">
+
+                <div class="desc-card"><h4>HTML Básico</h4><p>Etiquetas, listas, tablas.</p></div>
+                <div class="desc-card"><h4>Banco</h4><p>Tablas y miembros.</p></div>
+                <div class="desc-card"><h4>Operaciones</h4><p>Calculadora y clima.</p></div>
+                <div class="desc-card"><h4>APIs</h4><p>Pokémon, Países, Cripto.</p></div>
+                <div class="desc-card"><h4>Multimedia</h4><p>Mapas, audios y videos.</p></div>
+                <div class="desc-card"><h4>Red Social</h4><p>Publicaciones con likes.</p></div>
+                <div class="desc-card"><h4>Noticias</h4><p>Noticias reales.</p></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>Diseñada por Daysi Britos - 2025</p>
+    </div>
+</footer>
+
+<!-- ========== SCRIPT BIENVENIDA UNA SOLA VEZ ========= -->
+<script>
+window.onload = function () {
+
+  if (sessionStorage.getItem("saludoGuardado")) {
+    document.getElementById("greetingText").textContent =
+      sessionStorage.getItem("saludoGuardado");
+  } else {
+    document.getElementById("welcomeModal").style.display = "flex";
+  }
+};
+
+document.getElementById("welcomeForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let nombre = document.getElementById("userName").value;
+  let apellido = document.getElementById("userLastName").value;
+  let edad = parseInt(document.getElementById("userAge").value);
+
+  let resultado = edad > 20 ? "Es mayor de 20 años" : "Es menor de 20 años";
+
+  let mensaje = `Bienvenido/a ${nombre} ${apellido} - ${resultado}`;
+
+  sessionStorage.setItem("saludoGuardado", mensaje);
+
+  document.getElementById("greetingText").textContent = mensaje;
+  document.getElementById("welcomeModal").style.display = "none";
+});
+</script>
+
+</body>
+</html>
